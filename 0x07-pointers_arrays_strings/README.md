@@ -1,0 +1,1 @@
+Hello Pointers array strings
