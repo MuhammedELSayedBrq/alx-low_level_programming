@@ -4,25 +4,26 @@
 
 /**
  * create_array -  creates an array of chars, and initializes it with a specific char.
- * @array_size: int tells the size of desired array
- * @fill_char: the char to fill the array with
+ * @size: int tells the size of desired array
+ * @c: the char to fill the array with
  * @return: NULL if array_size equal 0 or if it fails or returns pointer to array
  */
 
-char* _create_array(unsigned int array_size, char fill_char) {
-  if (array_size == 0) {
+char* _create_array(unsigned int size, char c) {
+  if (size == 0) {
     return NULL;
   }
 
-  char *array = (char *) malloc(sizeof(char) * array_size);
+  char *result = (char *) malloc(sizeof(char) * size);
 
-  if (array == NULL) {
+  if (result == NULL) {
     return NULL;
   } else {
-    for (unsigned int i = 0; i < array_size; i++) {
-      array[i] = fill_char;
+	  unsigned int i;
+	    for (i = 0; i < size; i++) {
+		    result[i] = c;
     }
   }
 
-  return array;
+  return result;
 }
