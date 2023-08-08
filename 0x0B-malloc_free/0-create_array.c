@@ -4,27 +4,28 @@
 
 /**
  * create_array -  creates an array of specific char
- * @size: int tells the size of desired array
- * @c: the char to fill the array with
- * @return: NULL if array_size equal 0 or if it fails, returns pointer
+ * @size: The size of the array to create.
+ * @c: The character to fill the array with.
+ *
+ * Returns:
+ *   The created array, or NULL if the array could not be created.
  */
-
 char *create_array(unsigned int size, char c) {
-	
-  char *result;
-  if (size == 0)
-    return NULL;
+  char *array = NULL;
 
-  result = (char *) malloc(sizeof(char) * size);
-
-  if (result == NULL) {
+  if (size == 0) {
     return NULL;
-  } else {
-	  unsigned int i;
-	    for (i = 0; i < size; i++) {
-		    result[i] = c;
-    }
   }
 
-  return result;
+  array = malloc(sizeof(char) * size);
+
+  if (array == NULL) {
+    return NULL;
+  }
+
+  for (unsigned int i = 0; i < size; i++) {
+    array[i] = c;
+  }
+
+  return array;
 }
