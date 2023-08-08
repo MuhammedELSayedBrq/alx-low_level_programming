@@ -8,7 +8,7 @@
  * @return: NULL if array_size equal 0 or if it fails or returns pointer to array
  */
 
-char *create_array(unsigned int array_size, char fill_char) {
+char* _create_array(unsigned int array_size, char fill_char) {
   if (array_size == 0) {
     return NULL;
   }
