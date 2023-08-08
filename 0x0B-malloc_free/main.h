@@ -1,1 +1,1 @@
-char* _create_array(unsigned int array_size, char fill_char);
+char* create_array(unsigned int array_size, char fill_char);
