@@ -3,17 +3,17 @@
 #include "main.h"
 
 /**
- * create_array -  creates an array of chars, and initializes it with a specific char.
+ * create_array -  creates an array of specific char
  * @size: int tells the size of desired array
  * @c: the char to fill the array with
- * @return: NULL if array_size equal 0 or if it fails or returns pointer to array
+ * @return: NULL if array_size equal 0 or if it fails, returns pointer
  */
 
-char* create_array(unsigned int size, char c) {
-	char* result;
-  if (size == 0) {
+char *create_array(unsigned int size, char c) {
+	
+  char *result;
+  if (size == 0)
     return NULL;
-  }
 
   result = (char *) malloc(sizeof(char) * size);
 
